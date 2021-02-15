@@ -1,0 +1,11 @@
+/* purgecss start ignore */
+@import '../../node_modules/tailwindcss/base.css';
+@import '../../node_modules/tailwindcss/components.css';
+@import '../../node_modules/tailwindcss/utilities.css';
+
+@import 'color.css';
+@import 'length.css';
+@import 'outline.css';
+@import 'shadow.css';
+@import 'text.css';
+/* purgecss end ignore */

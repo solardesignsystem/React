@@ -1,0 +1,5 @@
+:root {
+    --length-hairline: 1px;
+    --length-base: 0.25rem;
+    --length-outline: calc(0.75 * var(--length-base));
+}

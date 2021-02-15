@@ -1,0 +1,8 @@
+:root {
+    --outline-brand: var(--length-outline) solid var(--color-brand-outline);
+    --outline-positive: var(--length-outline) solid var(--color-positive-outline);
+    --outline-special: var(--length-outline) solid var(--color-special-outline);
+    --outline-neutral: var(--length-outline) solid var(--color-neutral-outline);
+    --outline-callout: var(--length-outline) solid var(--color-callout-outline);
+    --outline-negative: var(--length-outline) solid var(--color-negative-outline);
+}

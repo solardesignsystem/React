@@ -1,0 +1,48 @@
+:root {
+    /* Font Families */
+    --font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-family-monospaced: Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
+
+    --font-family-heading: var(--font-sans-serif);
+    --font-family-body: var(--font-sans-serif);
+
+    /* Font Size */
+    --font-size-base: 1rem;
+
+    --font-size-hero-title: calc(var(--font-size-base) * 4);
+    --font-size-large-title: calc(var(--font-size-base) * 2);
+    --font-size-title: calc(var(--font-size-base) * 1.5);
+    --font-size-section-title: calc(var(--font-size-base) * 1.25);
+    --font-size-headline: var(--font-size-base);
+    --font-size-subheadline: calc(var(--font-size-base) * 0.9);
+    --font-size-body: var(--font-size-base);
+    --font-size-footnote: calc(var(--font-size-base) * 0.75);
+    --font-size-caption: calc(var(--font-size-base) * 0.65);
+
+    /* Line Height */
+    --font-line-height-hero-title: calc(1.2 * var(--font-size-hero-title));
+    --font-line-height-large-title: calc(1.2 * var(--font-size-large-title));
+    --font-line-height-title: calc(1.2 * var(--font-size-title));
+    --font-line-height-section-title: calc(1.25 * var(--font-size-section-title));
+    --font-line-height-headline: calc(1.3 * var(--font-size-headline));
+    --font-line-height-subheadline: calc(1.3 * var(--font-size-subheadline));
+    --font-line-height-body: calc(1.3 * var(--font-size-body));
+    --font-line-height-footnote: calc(1.4 * var(--font-size-footnote));
+    --font-line-height-caption: calc(1.2 * var(--font-size-caption));
+
+    /* Letter Spacing */
+    --font-letter-spacing-hero-title: 0.004em;
+    --font-letter-spacing-large-title: 0.013em;
+    --font-letter-spacing-title: 0.003em;
+    --font-letter-spacing-section-title: -0.023em;
+    --font-letter-spacing-headline: -0.02em;
+    --font-letter-spacing-subheadline: -0.011em;
+    --font-letter-spacing-body: -0.02em;
+    --font-letter-spacing-footnote: 0em;
+    --font-letter-spacing-caption: 0.012em;
+}

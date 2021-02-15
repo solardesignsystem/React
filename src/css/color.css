@@ -1,0 +1,768 @@
+/* MARK: - Main Color Definitions */
+:root {
+    /* MARK: - Prominent Color Definitions */
+
+    /* Brand */
+    --color-brand-light: hsla(262, 61%, 59%, 1);
+    --color-brand-dark: hsla(262, 73%, 63%, 1);
+    --color-brand-light-high-contrast: hsla(262, 52%, 42%, 1);
+    --color-brand-dark-high-contrast: hsla(262, 100%, 74%, 1);
+
+    --color-brand-hover-light: hsla(262, 61%, 64%, 1);
+    --color-brand-hover-dark: hsla(262, 73%, 68%, 1);
+    --color-brand-hover-light-high-contrast: hsla(262, 52%, 47%, 1);
+    --color-brand-hover-dark-high-contrast: hsla(262, 100%, 79%, 1);
+
+    --color-brand-active-light: hsla(262, 61%, 54%, 1);
+    --color-brand-active-dark: hsla(262, 73%, 58%, 1);
+    --color-brand-active-light-high-contrast: hsla(262, 52%, 37%, 1);
+    --color-brand-active-dark-high-contrast: hsla(262, 100%, 69%, 1);
+
+    /* Positive */
+    --color-positive-light: hsla(135, 59%, 49%, 1);
+    --color-positive-dark: hsla(135, 64%, 50%, 1);
+    --color-positive-light-high-contrast: hsla(135, 59%, 34%, 1);
+    --color-positive-dark-high-contrast: hsla(135, 70%, 52%, 1);
+
+    --color-positive-hover-light: hsla(135, 59%, 54%, 1);
+    --color-positive-hover-dark: hsla(135, 64%, 55%, 1);
+    --color-positive-hover-light-high-contrast: hsla(135, 59%, 39%, 1);
+    --color-positive-hover-dark-high-contrast: hsla(135, 70%, 57%, 1);
+
+    --color-positive-active-light: hsla(135, 59%, 44%, 1);
+    --color-positive-active-dark: hsla(135, 64%, 45%, 1);
+    --color-positive-active-light-high-contrast: hsla(135, 59%, 29%, 1);
+    --color-positive-active-dark-high-contrast: hsla(135, 70%, 47%, 1);
+
+    /* Callout */
+    --color-callout-light: hsla(276, 61%, 59%, 1);
+    --color-callout-dark: hsla(276, 77%, 65%, 1);
+    --color-callout-light-high-contrast: hsla(276, 40%, 46%, 1);
+    --color-callout-dark-high-contrast: hsla(276, 88%, 77%, 1);
+
+    --color-callout-hover-light: hsla(276, 61%, 64%, 1);
+    --color-callout-hover-dark: hsla(276, 77%, 70%, 1);
+    --color-callout-hover-light-high-contrast: hsla(276, 40%, 51%, 1);
+    --color-callout-hover-dark-high-contrast: hsla(276, 88%, 82%, 1);
+
+    --color-callout-active-light: hsla(276, 61%, 54%, 1);
+    --color-callout-active-dark: hsla(276, 77%, 60%, 1);
+    --color-callout-active-light-high-contrast: hsla(276, 40%, 41%, 1);
+    --color-callout-active-dark-high-contrast: hsla(276, 88%, 72%, 1);
+
+    /* Neutral */
+    --color-neutral-light: hsla(213, 100%, 50%, 1);
+    --color-neutral-dark: hsla(210, 100%, 52%, 1);
+    --color-neutral-light-high-contrast: hsla(223, 100%, 43%, 1);
+    --color-neutral-dark-high-contrast: hsla(211, 100%, 63%, 1);
+
+    --color-neutral-hover-light: hsla(213, 100%, 55%, 1);
+    --color-neutral-hover-dark: hsla(210, 100%, 57%, 1);
+    --color-neutral-hover-light-high-contrast: hsla(223, 100%, 48%, 1);
+    --color-neutral-hover-dark-high-contrast: hsla(211, 100%, 68%, 1);
+
+    --color-neutral-active-light: hsla(213, 100%, 45%, 1);
+    --color-neutral-active-dark: hsla(210, 100%, 47%, 1);
+    --color-neutral-active-light-high-contrast: hsla(223, 100%, 38%, 1);
+    --color-neutral-active-dark-high-contrast: hsla(211, 100%, 58%, 1);
+
+    /* Warning */
+    --color-warning-light: hsla(35, 100%, 50%, 1);
+    --color-warning-dark: hsla(36, 100%, 52%, 1);
+    --color-warning-light-high-contrast: hsla(16, 100%, 39%, 1);
+    --color-warning-dark-high-contrast: hsla(36, 100%, 63%, 1);
+
+    --color-warning-hover-light: hsla(35, 100%, 55%, 1);
+    --color-warning-hover-dark: hsla(36, 100%, 57%, 1);
+    --color-warning-hover-light-high-contrast: hsla(16, 100%, 44%, 1);
+    --color-warning-hover-dark-high-contrast: hsla(36, 100%, 68%, 1);
+
+    --color-warning-active-light: hsla(35, 100%, 45%, 1);
+    --color-warning-active-dark: hsla(36, 100%, 47%, 1);
+    --color-warning-active-light-high-contrast: hsla(16, 100%, 34%, 1);
+    --color-warning-active-dark-high-contrast: hsla(36, 100%, 58%, 1);
+
+    /* Negative */
+    --color-negative-light: hsla(3, 100%, 59%, 1);
+    --color-negative-dark: hsla(3, 100%, 61%, 1);
+    --color-negative-light-high-contrast: hsla(354, 100%, 42%, 1);
+    --color-negative-dark-high-contrast: hsla(3, 100%, 69%, 1);
+
+    --color-negative-hover-light: hsla(3, 100%, 64%, 1);
+    --color-negative-hover-dark: hsla(3, 100%, 66%, 1);
+    --color-negative-hover-light-high-contrast: hsla(354, 100%, 47%, 1);
+    --color-negative-hover-dark-high-contrast: hsla(3, 100%, 74%, 1);
+
+    --color-negative-active-light: hsla(3, 100%, 54%, 1);
+    --color-negative-active-dark: hsla(3, 100%, 56%, 1);
+    --color-negative-active-light-high-contrast: hsla(354, 100%, 37%, 1);
+    --color-negative-active-dark-high-contrast: hsla(3, 100%, 64%, 1);
+
+    /* None */
+    --color-dull-light: hsla(240, 5%, 48%, 0);
+    --color-dull-dark: hsla(240, 5%, 48%, 0.2);
+    --color-dull-light-high-contrast: hsla(240, 5%, 48%, 0);
+    --color-dull-dark-high-contrast: hsla(240, 5%, 48%, 0.2);
+
+    --color-dull-hover-light: hsla(240, 5%, 48%, 0.1);
+    --color-dull-hover-dark: hsla(240, 5%, 48%, 0.25);
+    --color-dull-hover-light-high-contrast: hsla(240, 5%, 48%, 0.1);
+    --color-dull-hover-dark-high-contrast: hsla(240, 5%, 48%, 0.25);
+
+    --color-dull-active-light: hsla(240, 5%, 48%, 0.15);
+    --color-dull-active-dark: hsla(240, 5%, 48%, 0.15);
+    --color-dull-active-light-high-contrast: hsla(240, 5%, 48%, 0.15);
+    --color-dull-active-dark-high-contrast: hsla(240, 5%, 48%, 0.15);
+
+    /* Link */
+    --color-link-light: hsla(213, 100%, 50%, 1);
+    --color-link-dark: hsla(210, 100%, 52%, 1);
+    --color-link-light-high-contrast: hsla(223, 100%, 43%, 1);
+    --color-link-dark-high-contrast: hsla(211, 100%, 63%, 1);
+
+    --color-link-hover-light: hsla(213, 100%, 55%, 1);
+    --color-link-hover-dark: hsla(210, 100%, 57%, 1);
+    --color-link-hover-light-high-contrast: hsla(223, 100%, 48%, 1);
+    --color-link-hover-dark-high-contrast: hsla(211, 100%, 68%, 1);
+
+    --color-link-active-light: hsla(213, 100%, 45%, 1);
+    --color-link-active-dark: hsla(210, 100%, 47%, 1);
+    --color-link-active-light-high-contrast: hsla(223, 100%, 38%, 1);
+    --color-link-active-dark-high-contrast: hsla(211, 100%, 58%, 1);
+
+    /* MARK: - Text Color Definitions */
+
+    /* Primary Text */
+    --color-primary-text-light: hsla(0, 0%, 0%, 1);
+    --color-primary-text-dark: hsla(0, 0%, 100%, 1);
+    --color-primary-text-light-high-contrast: hsla(0, 0%, 0%, 1);
+    --color-primary-text-dark-high-contrast: hsla(0, 0%, 100%, 1);
+
+    /* Secondary Text */
+    --color-secondary-text-light: hsla(240, 6%, 25%, 0.6);
+    --color-secondary-text-dark: hsla(240, 33%, 94%, 0.6);
+    --color-secondary-text-light-high-contrast: hsla(240, 6%, 25%, 0.68);
+    --color-secondary-text-dark-high-contrast: hsla(240, 33%, 94%, 0.68);
+
+    /* MARK: - Background Color Definitions */
+
+    /* Primary Background */
+    --color-primary-background-light: hsla(240, 24%, 96%, 1);
+    --color-primary-background-dark: hsla(0, 0%, 0%, 1);
+    --color-primary-background-light-high-contrast: hsla(240, 14%, 93%, 1);
+    --color-primary-background-dark-high-contrast: hsla(0, 0%, 0%, 1);
+
+    /* Secondary Background */
+    --color-secondary-background-light: hsla(0, 0%, 100%, 1);
+    --color-secondary-background-dark: hsla(240, 3%, 11%, 1);
+    --color-secondary-background-light-high-contrast: hsla(0, 0%, 100%, 1);
+    --color-secondary-background-dark-high-contrast: hsla(240, 3%, 15%, 1);
+
+    /* Tertiary Background */
+    --color-tertiary-background-light: hsla(240, 24%, 96%, 1);
+    --color-tertiary-background-dark: hsla(240, 2%, 18%, 1);
+    --color-tertiary-background-light-high-contrast: hsla(240, 14%, 93%, 1);
+    --color-tertiary-background-dark-high-contrast: hsla(240, 2%, 22%, 1);
+
+    /* Elevated Primary Background */
+    --color-elevated-primary-background-light: hsla(0, 0%, 100%, 1);
+    --color-elevated-primary-background-dark: hsla(240, 3%, 11%, 1);
+    --color-elevated-primary-background-light-high-contrast: hsla(0,
+            0%,
+            100%,
+            1);
+    --color-elevated-primary-background-dark-high-contrast: hsla(240,
+            3%,
+            15%,
+            1);
+
+    /* Elevated Secondary Background */
+    --color-elevated-secondary-background-light: hsla(240, 24%, 96%, 1);
+    --color-elevated-secondary-background-dark: hsla(240, 2%, 18%, 1);
+    --color-elevated-secondary-background-light-high-contrast: hsla(240,
+            14%,
+            93%,
+            1);
+    --color-elevated-secondary-background-dark-high-contrast: hsla(240,
+            2%,
+            22%,
+            1);
+
+    /* Elevated Tertiary Background */
+    --color-elevated-tertiary-background-light: hsla(0, 0%, 100%, 1);
+    --color-elevated-tertiary-background-dark: hsla(240, 2%, 23%, 1);
+    --color-elevated-tertiary-background-light-high-contrast: hsla(0,
+            0%,
+            100%,
+            1);
+    --color-elevated-tertiary-background-dark-high-contrast: hsla(240,
+            2%,
+            27%,
+            1);
+
+    /* MARK: - Subtle Color Definitions */
+
+    /* Brand */
+    --color-brand-subtle-light: hsla(262, 61%, 59%, 0.2);
+    --color-brand-subtle-dark: hsla(262, 73%, 63%, 0.2);
+    --color-brand-subtle-light-high-contrast: hsla(262, 52%, 42%, 0.2);
+    --color-brand-subtle-dark-high-contrast: hsla(262, 100%, 74%, 0.2);
+
+    --color-brand-subtle-hover-light: hsla(262, 61%, 64%, 0.2);
+    --color-brand-subtle-hover-dark: hsla(262, 73%, 68%, 0.2);
+    --color-brand-subtle-hover-light-high-contrast: hsla(262, 52%, 47%, 0.2);
+    --color-brand-subtle-hover-dark-high-contrast: hsla(262, 100%, 79%, 0.2);
+
+    --color-brand-subtle-active-light: hsla(262, 61%, 54%, 0.2);
+    --color-brand-subtle-active-dark: hsla(262, 73%, 58%, 0.2);
+    --color-brand-subtle-active-light-high-contrast: hsla(262, 52%, 37%, 0.2);
+    --color-brand-subtle-active-dark-high-contrast: hsla(262, 100%, 69%, 0.2);
+
+    /* Positive */
+    --color-positive-subtle-light: hsla(135, 59%, 49%, 0.14);
+    --color-positive-subtle-dark: hsla(135, 64%, 50%, 0.14);
+    --color-positive-subtle-light-high-contrast: hsla(135, 59%, 34%, 0.14);
+    --color-positive-subtle-dark-high-contrast: hsla(135, 70%, 52%, 0.14);
+
+    --color-positive-subtle-hover-light: hsla(135, 59%, 54%, 0.14);
+    --color-positive-subtle-hover-dark: hsla(135, 64%, 55%, 0.14);
+    --color-positive-subtle-hover-light-high-contrast: hsla(135,
+            59%,
+            39%,
+            0.14);
+    --color-positive-subtle-hover-dark-high-contrast: hsla(135, 70%, 57%, 0.14);
+
+    /* Callout */
+    --color-callout-subtle-light: hsla(276, 61%, 59%, 0.18);
+    --color-callout-subtle-dark: hsla(276, 77%, 65%, 0.18);
+    --color-callout-subtle-light-high-contrast: hsla(276, 40%, 46%, 0.18);
+    --color-callout-subtle-dark-high-contrast: hsla(276, 88%, 77%, 0.18);
+
+    --color-callout-subtle-hover-light: hsla(276, 61%, 64%, 0.18);
+    --color-callout-subtle-hover-dark: hsla(276, 77%, 70%, 0.18);
+    --color-callout-subtle-hover-light-high-contrast: hsla(276, 40%, 51%, 0.18);
+    --color-callout-subtle-hover-dark-high-contrast: hsla(276, 88%, 82%, 0.18);
+
+    --color-callout-subtle-active-light: hsla(276, 61%, 54%, 0.18);
+    --color-callout-subtle-active-dark: hsla(276, 77%, 60%, 0.18);
+    --color-callout-subtle-active-light-high-contrast: hsla(276,
+            40%,
+            41%,
+            0.18);
+    --color-callout-subtle-active-dark-high-contrast: hsla(276, 88%, 72%, 0.18);
+
+    /* Neutral */
+    --color-neutral-subtle-light: hsla(213, 100%, 50%, 0.17);
+    --color-neutral-subtle-dark: hsla(210, 100%, 52%, 0.17);
+    --color-neutral-subtle-light-high-contrast: hsla(223, 100%, 43%, 0.17);
+    --color-neutral-subtle-dark-high-contrast: hsla(211, 100%, 63%, 0.17);
+
+    --color-neutral-subtle-hover-light: hsla(213, 100%, 55%, 0.17);
+    --color-neutral-subtle-hover-dark: hsla(210, 100%, 57%, 0.17);
+    --color-neutral-subtle-hover-light-high-contrast: hsla(223,
+            100%,
+            48%,
+            0.17);
+    --color-neutral-subtle-hover-dark-high-contrast: hsla(211, 100%, 68%, 0.17);
+
+    --color-neutral-subtle-active-light: hsla(213, 100%, 45%, 0.17);
+    --color-neutral-subtle-active-dark: hsla(210, 100%, 47%, 0.17);
+    --color-neutral-subtle-active-light-high-contrast: hsla(223,
+            100%,
+            38%,
+            0.17);
+    --color-neutral-subtle-active-dark-high-contrast: hsla(211,
+            100%,
+            58%,
+            0.17);
+
+    /* Warning */
+    --color-warning-subtle-light: rgba(255, 149, 0, 0.15);
+    --color-warning-subtle-dark: hsla(36, 100%, 52%, 0.15);
+    --color-warning-subtle-light-high-contrast: hsla(16, 100%, 39%, 0.15);
+    --color-warning-subtle-dark-high-contrast: hsla(36, 100%, 63%, 0.15);
+
+    --color-warning-subtle-hover-light: hsla(35, 100%, 55%, 0.15);
+    --color-warning-subtle-hover-dark: hsla(36, 100%, 57%, 0.15);
+    --color-warning-subtle-hover-light-high-contrast: hsla(16, 100%, 44%, 0.15);
+    --color-warning-subtle-hover-dark-high-contrast: hsla(36, 100%, 68%, 0.15);
+
+    --color-warning-subtle-active-light: hsla(35, 100%, 45%, 0.15);
+    --color-warning-subtle-active-dark: hsla(36, 100%, 47%, 0.15);
+    --color-warning-subtle-active-light-high-contrast: hsla(16,
+            100%,
+            34%,
+            0.15);
+    --color-warning-subtle-active-dark-high-contrast: hsla(36, 100%, 58%, 0.15);
+
+    /* Negative */
+    --color-negative-subtle-light: hsla(3, 100%, 59%, 0.17);
+    --color-negative-subtle-dark: hsla(3, 100%, 61%, 0.17);
+    --color-negative-subtle-light-high-contrast: hsla(354, 100%, 42%, 0.17);
+    --color-negative-subtle-dark-high-contrast: hsla(3, 100%, 69%, 0.17);
+
+    --color-negative-subtle-hover-light: hsla(3, 100%, 64%, 0.17);
+    --color-negative-subtle-hover-dark: hsla(3, 100%, 66%, 0.17);
+    --color-negative-subtle-hover-light-high-contrast: hsla(354,
+            100%,
+            47%,
+            0.17);
+    --color-negative-subtle-hover-dark-high-contrast: hsla(3, 100%, 74%, 0.17);
+
+    --color-negative-subtle-active-light: hsla(3, 100%, 54%, 0.17);
+    --color-negative-subtle-active-dark: hsla(3, 100%, 56%, 0.17);
+    --color-negative-subtle-active-light-high-contrast: hsla(354,
+            100%,
+            37%,
+            0.17);
+    --color-negative-subtle-active-dark-high-contrast: hsla(3, 100%, 64%, 0.17);
+
+    /* Dull */
+    --color-dull-subtle-light: hsla(231, 100%, 3%, 0.14);
+    --color-dull-subtle-dark: hsla(231, 100%, 97%, 0.14);
+    --color-dull-subtle-light-high-contrast: hsla(231, 100%, 3%, 0.14);
+    --color-dull-subtle-dark-high-contrast: hsla(231, 100%, 97%, 0.14);
+
+    --color-dull-subtle-hover-light: hsla(231, 100%, 3%, 0.09);
+    --color-dull-subtle-hover-dark: hsla(231, 100%, 97%, 0.19);
+    --color-dull-subtle-hover-light-high-contrast: hsla(231, 100%, 3%, 0.09);
+    --color-dull-subtle-hover-dark-high-contrast: hsla(231, 100%, 97%, 0.19);
+
+    --color-dull-subtle-active-light: hsla(231, 100%, 3%, 0.19);
+    --color-dull-subtle-active-dark: hsla(231, 100%, 97%, 0.09);
+    --color-dull-subtle-active-light-high-contrast: hsla(231, 100%, 3%, 0.19);
+    --color-dull-subtle-active-dark-high-contrast: hsla(231, 100%, 97%, 0.09);
+
+    /* MARK: - Outline Color Definitions */
+
+    /* Brand */
+    --color-brand-outline-light: hsla(262, 61%, 59%, 0.45);
+    --color-brand-outline-dark: hsla(262, 73%, 63%, 0.45);
+    --color-brand-outline-light-high-contrast: hsla(262, 52%, 42%, 0.45);
+    --color-brand-outline-dark-high-contrast: hsla(262, 100%, 74%, 0.45);
+
+    /* Positive */
+    --color-positive-outline-light: hsla(135, 59%, 49%, 0.45);
+    --color-positive-outline-dark: hsla(135, 64%, 50%, 0.45);
+    --color-positive-outline-light-high-contrast: hsla(135, 59%, 34%, 0.45);
+    --color-positive-outline-dark-high-contrast: hsla(135, 70%, 52%, 0.45);
+
+    /* Callout */
+    --color-callout-outline-light: hsla(276, 61%, 59%, 0.45);
+    --color-callout-outline-dark: hsla(276, 77%, 65%, 0.45);
+    --color-callout-outline-light-high-contrast: hsla(276, 40%, 46%, 0.45);
+    --color-callout-outline-dark-high-contrast: hsla(276, 88%, 77%, 0.45);
+
+    /* Neutral */
+    --color-neutral-outline-light: hsla(213, 100%, 50%, 0.45);
+    --color-neutral-outline-dark: hsla(210, 100%, 52%, 0.45);
+    --color-neutral-outline-light-high-contrast: hsla(223, 100%, 43%, 0.45);
+    --color-neutral-outline-dark-high-contrast: hsla(211, 100%, 63%, 0.45);
+
+    /* Warning */
+    --color-warning-outline-light: hsla(35, 100%, 50%, 0.45);
+    --color-warning-outline-dark: hsla(36, 100%, 52%, 0.45);
+    --color-warning-outline-light-high-contrast: hsla(16, 100%, 39%, 0.45);
+    --color-warning-outline-dark-high-contrast: hsla(36, 100%, 63%, 0.45);
+
+    /* Negative */
+    --color-negative-outline-light: hsla(3, 100%, 59%, 0.45);
+    --color-negative-outline-dark: hsla(3, 100%, 61%, 0.45);
+    --color-negative-outline-light-high-contrast: hsla(354, 100%, 42%, 0.45);
+    --color-negative-outline-dark-high-contrast: hsla(3, 100%, 69%, 0.45);
+
+    /* None */
+    --color-dull-outline-light: hsla(231, 100%, 97%, 0.45);
+    --color-dull-outline-dark: hsla(231, 100%, 97%, 0.45);
+    --color-dull-outline-light-high-contrast: hsla(231, 100%, 97%, 0.45);
+    --color-dull-outline-dark-high-contrast: hsla(231, 100%, 97%, 0.45);
+
+    /* Link */
+    --color-link-outline-light: hsla(231, 100%, 97%, 0.45);
+    --color-link-outline-dark: hsla(210, 100%, 52%, 0.45);
+    --color-link-outline-light-high-contrast: hsla(223, 100%, 43%, 0.45);
+    --color-link-outline-dark-high-contrast: hsla(211, 100%, 63%, 0.45);
+
+    /* MARK: - Fill Color Definitions */
+    --color-small-fill-light: hsla(240, 3%, 49%, 0.2);
+    --color-small-fill-dark: hsla(240, 3%, 49%, 0.36);
+
+    --color-medium-fill-light: hsla(240, 3%, 49%, 0.16);
+    --color-medium-fill-dark: hsla(240, 3%, 49%, 0.32);
+
+    --color-large-fill-light: hsla(240, 4%, 48%, 0.12);
+    --color-large-fill-dark: hsla(240, 4%, 48%, 0.24);
+
+    --color-container-fill-light: hsla(240, 5%, 48%, 0.08);
+    --color-container-fill-dark: hsla(240, 5%, 48%, 0.18);
+
+    /* MARK: - Other Color Definitions */
+
+    /* Divider  */
+    --color-divider-light: hsla(240, 6%, 25%, 0.29);
+    --color-divider-dark: hsla(240, 2%, 33%, 0.6);
+    --color-divider-light-high-contrast: hsla(240, 6%, 25%, 0.37);
+    --color-divider-dark-high-contrast: hsla(240, 2%, 33%, 0.68);
+
+    /* Placeholder  */
+    --color-placeholder-light: hsla(240, 12%, 27%, 0.3);
+    --color-placeholder-dark: hsla(240, 33%, 94%, 0.3);
+    --color-placeholder-light-high-contrast: hsla(240, 12%, 27%, 0.38);
+    --color-placeholder-dark-high-contrast: hsla(240, 33%, 94%, 0.38);
+}
+
+/* MARK: - Light Color Definitions */
+
+:root {
+    /* Prominent Color Definitions */
+    --color-brand: var(--color-brand-light);
+    --color-brand-hover: var(--color-brand-hover-light);
+    --color-brand-active: var(--color-brand-active-light);
+    --color-brand-static: var(--color-brand-light);
+    --color-positive: var(--color-positive-light);
+    --color-positive-hover: var(--color-positive-hover-light);
+    --color-positive-active: var(--color-positive-active-light);
+    --color-callout: var(--color-callout-light);
+    --color-callout-hover: var(--color-callout-hover-light);
+    --color-callout-active: var(--color-callout-active-light);
+    --color-neutral: var(--color-neutral-light);
+    --color-neutral-hover: var(--color-neutral-hover-light);
+    --color-neutral-active: var(--color-neutral-active-light);
+    --color-warning: var(--color-warning-light);
+    --color-warning-hover: var(--color-warning-hover-light);
+    --color-warning-active: var(--color-warning-active-light);
+    --color-negative: var(--color-negative-light);
+    --color-negative-hover: var(--color-negative-hover-light);
+    --color-negative-active: var(--color-negative-active-light);
+    --color-dull: var(--color-dull-light);
+    --color-dull-hover: var(--color-dull-hover-light);
+    --color-dull-active: var(--color-dull-active-light);
+
+    /* Text Color Definitions */
+    --color-primary-text: var(--color-primary-text-light);
+    --color-secondary-text: var(--color-secondary-text-light);
+    --color-inverse-text: var(--color-primary-text-dark);
+    --color-dark-text: var(--color-primary-text-light);
+    --color-light-text: var(--color-primary-text-dark);
+    --color-link: var(--color-link-light);
+    --color-link-hover: var(--color-link-hover-light);
+    --color-link-active: var(--color-link-active-light);
+    --color-link-visited: var(--color-link-visited-light);
+
+    /* Background Color Definitions */
+    --color-primary-background: var(--color-primary-background-light);
+    --color-secondary-background: var(--color-secondary-background-light);
+    --color-tertiary-background: var(--color-tertiary-background-light);
+
+    --color-field-background: var(--color-secondary-background-light);
+
+    --color-elevated-primary-background: var(--color-elevated-primary-background-light);
+    --color-elevated-secondary-background: var(--color-elevated-secondary-background-light);
+    --color-elevated-tertiary-background: var(--color-elevated-tertiary-background-light);
+
+    
+
+    /* Subtle Color Definitions */
+    --color-brand-subtle: var(--color-brand-subtle-light);
+    --color-brand-subtle-hover: var(--color-brand-subtle-hover-light);
+    --color-brand-subtle-active: var(--color-brand-subtle-active-light);
+    --color-brand-subtle-static: var(--color-brand-subtle-light);
+    --color-positive-subtle: var(--color-positive-subtle-light);
+    --color-positive-subtle-hover: var(--color-positive-subtle-hover-light);
+    --color-positive-subtle-active: var(--color-positive-subtle-active-light);
+    --color-callout-subtle: var(--color-callout-subtle-light);
+    --color-callout-subtle-hover: var(--color-callout-subtle-hover-light);
+    --color-callout-subtle-active: var(--color-callout-subtle-active-light);
+    --color-neutral-subtle: var(--color-neutral-subtle-light);
+    --color-neutral-subtle-hover: var(--color-neutral-subtle-hover-light);
+    --color-neutral-subtle-active: var(--color-neutral-subtle-active-light);
+    --color-warning-subtle: var(--color-warning-subtle-light);
+    --color-warning-subtle-hover: var(--color-warning-subtle-hover-light);
+    --color-warning-subtle-active: var(--color-warning-subtle-active-light);
+    --color-negative-subtle: var(--color-negative-subtle-light);
+    --color-negative-subtle-hover: var(--color-negative-subtle-hover-light);
+    --color-negative-subtle-active: var(--color-negative-subtle-active-light);
+    --color-dull-subtle: var(--color-dull-subtle-light);
+    --color-dull-subtle-hover: var(--color-dull-subtle-hover-light);
+    --color-dull-subtle-active: var(--color-dull-subtle-active-light);
+
+    /* Outline Color Definitions */
+    --color-brand-outline: var(--color-brand-outline-light);
+    --color-positive-outline: var(--color-positive-outline-light);
+    --color-callout-outline: var(--color-callout-outline-light);
+    --color-neutral-outline: var(--color-neutral-outline-light);
+    --color-warning-outline: var(--color-warning-outline-light);
+    --color-negative-outline: var(--color-negative-outline-light);
+    --color-dull-outline: var(--color-dull-outline-light);
+
+    /* Fill Color Definitions */
+    --color-small-fill: var(--color-small-fill-light);
+    --color-medium-fill: var(--color-medium-fill-light);
+    --color-large-fill: var(--color-large-fill-light);
+    --color-container-fill: var(--color-container-fill-light);
+
+    /* Other Color Definitions */
+    --color-divider: var(--color-divider-light);
+    --color-placeholder: var(--color-placeholder-light);
+}
+
+/* MARK: - Dark Color Definitions */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Prominent Color Definitions */
+        --color-brand: var(--color-brand-dark);
+        --color-brand-hover: var(--color-brand-hover-dark);
+        --color-brand-active: var(--color-brand-active-dark);
+        --color-brand-outline: var(--color-brand-outline-dark);
+        --color-brand-static: var(--color-brand-dark);
+        --color-positive: var(--color-positive-dark);
+        --color-positive-hover: var(--color-positive-hover-dark);
+        --color-positive-active: var(--color-positive-active-dark);
+        --color-positive-outline: var(--color-positive-outline-dark);
+        --color-callout: var(--color-callout-dark);
+        --color-callout-hover: var(--color-callout-hover-dark);
+        --color-callout-active: var(--color-callout-active-dark);
+        --color-callout-outline: var(--color-callout-outline-dark);
+        --color-neutral: var(--color-neutral-dark);
+        --color-neutral-hover: var(--color-neutral-hover-dark);
+        --color-neutral-active: var(--color-neutral-active-dark);
+        --color-neutral-outline: var(--color-neutral-outline-dark);
+        --color-warning: var(--color-warning-dark);
+        --color-warning-hover: var(--color-warning-hover-dark);
+        --color-warning-active: var(--color-warning-active-dark);
+        --color-warning-outline: var(--color-warning-outline-dark);
+        --color-negative: var(--color-negative-dark);
+        --color-negative-hover: var(--color-negative-hover-dark);
+        --color-negative-active: var(--color-negative-active-dark);
+        --color-negative-outline: var(--color-negative-outline-dark);
+        --color-dull: var(--color-dull-dark);
+        --color-dull-hover: var(--color-dull-hover-dark);
+        --color-dull-active: var(--color-dull-active-dark);
+        --color-dull-outline: var(--color-dull-outline-dark);
+
+        /* Text Color Definitions */
+        --color-primary-text: var(--color-primary-text-dark);
+        --color-secondary-text: var(--color-secondary-text-dark);
+        --color-inverse-text: var(--color-primary-text-light);
+        --color-link: var(--color-link-dark);
+        --color-link-hover: var(--color-link-hover-dark);
+        --color-link-active: var(--color-link-active-dark);
+        --color-link-visited: var(--color-link-visited-dark);
+
+        /* Background Color Definitions */
+        --color-primary-background: var(--color-primary-background-dark);
+        --color-secondary-background: var(--color-secondary-background-dark);
+        --color-tertiary-background: var(--color-tertiary-background-dark);
+
+        --color-field-background: var(--color-primary-background-dark);
+
+        --color-elevated-primary-background: var(--color-elevated-primary-background-dark);
+        --color-elevated-secondary-background: var(--color-elevated-secondary-background-dark);
+        --color-elevated-tertiary-background: var(--color-elevated-tertiary-background-dark);
+
+        /* Subtle Color Definitions */
+        --color-brand-subtle: var(--color-brand-subtle-dark);
+        --color-brand-subtle-hover: var(--color-brand-subtle-hover-dark);
+        --color-brand-subtle-active: var(--color-brand-subtle-active-dark);
+        --color-brand-subtle-static: var(--color-brand-subtle-dark);
+        --color-positive-subtle: var(--color-positive-subtle-dark);
+        --color-positive-subtle-hover: var(--color-positive-subtle-hover-dark);
+        --color-positive-subtle-active: var(--color-positive-subtle-active-dark);
+        --color-callout-subtle: var(--color-callout-subtle-dark);
+        --color-callout-subtle-hover: var(--color-callout-subtle-hover-dark);
+        --color-callout-subtle-active: var(--color-callout-subtle-active-dark);
+        --color-neutral-subtle: var(--color-neutral-subtle-dark);
+        --color-neutral-subtle-hover: var(--color-neutral-subtle-hover-dark);
+        --color-neutral-subtle-active: var(--color-neutral-subtle-active-dark);
+        --color-warning-subtle: var(--color-warning-subtle-dark);
+        --color-warning-subtle-hover: var(--color-warning-subtle-hover-dark);
+        --color-warning-subtle-active: var(--color-warning-subtle-active-dark);
+        --color-negative-subtle: var(--color-negative-subtle-dark);
+        --color-negative-subtle-hover: var(--color-negative-subtle-hover-dark);
+        --color-negative-subtle-active: var(--color-negative-subtle-active-dark);
+        --color-dull-subtle: var(--color-dull-subtle-dark);
+        --color-dull-subtle-hover: var(--color-dull-subtle-hover-dark);
+        --color-dull-subtle-active: var(--color-dull-subtle-active-dark);
+
+        /* Fill Color Definitions */
+        --color-small-fill: var(--color-small-fill-dark);
+        --color-medium-fill: var(--color-medium-fill-dark);
+        --color-large-fill: var(--color-large-fill-dark);
+        --color-container-fill: var(--color-container-fill-dark);
+
+        /* Other Color Definitions */
+        --color-divider: var(--color-divider-dark);
+        --color-placeholder: var(--color-placeholder-dark);
+    }
+}
+
+/* MARK: - Light High Contrast Color Definitions */
+
+@media (prefers-contrast: high) {
+    :root {
+        /* Prominent Color Definitions */
+        --color-brand: var(--color-brand-light-high-contrast);
+        --color-brand-hover: var(--color-brand-hover-light-high-contrast);
+        --color-brand-active: var(--color-brand-active-light-high-contrast);
+        --color-brand-outline: var(--color-brand-outline-light-high-contrast);
+        --color-brand-static: var(--color-brand-light-high-contrast);
+        --color-positive: var(--color-positive-light-high-contrast);
+        --color-positive-hover: var(--color-positive-hover-light-high-contrast);
+        --color-positive-active: var(--color-positive-active-light-high-contrast);
+        --color-positive-outline: var(--color-positive-outline-light-high-contrast);
+        --color-callout: var(--color-callout-light-high-contrast);
+        --color-callout-hover: var(--color-callout-hover-light-high-contrast);
+        --color-callout-active: var(--color-callout-active-light-high-contrast);
+        --color-callout-outline: var(--color-callout-outline-light-high-contrast);
+        --color-neutral: var(--color-neutral-light-high-contrast);
+        --color-neutral-hover: var(--color-neutral-hover-light-high-contrast);
+        --color-neutral-active: var(--color-neutral-active-light-high-contrast);
+        --color-neutral-outline: var(--color-neutral-outline-light-high-contrast);
+        --color-warning: var(--color-warning-light-high-contrast);
+        --color-warning-hover: var(--color-warning-hover-light-high-contrast);
+        --color-warning-active: var(--color-warning-active-light-high-contrast);
+        --color-warning-outline: var(--color-warning-outline-light-high-contrast);
+        --color-negative: var(--color-negative-light-high-contrast);
+        --color-negative-hover: var(--color-negative-hover-light-high-contrast);
+        --color-negative-active: var(--color-negative-active-light-high-contrast);
+        --color-negative-outline: var(--color-negative-outline-light-high-contrast);
+        --color-dull: var(--color-dull-light-high-contrast);
+        --color-dull-hover: var(--color-dull-hover-light-high-contrast);
+        --color-dull-active: var(--color-dull-active-light-high-contrast);
+        --color-dull-outline: var(--color-dull-outline-light-high-contrast);
+
+        /* Text Color Definitions */
+        --color-primary-text: var(--color-primary-text-light-high-contrast);
+        --color-secondary-text: var(--color-secondary-text-light-high-contrast);
+        --color-inverse-text: var(--color-primary-text-dark-high-contrast);
+        --color-link: var(--color-link-light-high-contrast);
+        --color-link-hover: var(--color-link-hover-light-high-contrast);
+        --color-link-active: var(--color-link-active-light-high-contrast);
+        --color-link-visited: var(--color-link-visited-light-high-contrast);
+
+        /* Background Color Definitions */
+        --color-primary-background: var(--color-primary-background-light-high-contrast);
+        --color-secondary-background: var(--color-secondary-background-light-high-contrast);
+        --color-tertiary-background: var(--color-tertiary-background-light-high-contrast);
+
+        --color-field-background: var(--color-secondary-background-light-high-contrast);
+
+        --color-elevated-primary-background: var(--color-elevated-primary-background-light-high-contrast);
+        --color-elevated-secondary-background: var(--color-elevated-secondary-background-light-high-contrast);
+        --color-elevated-tertiary-background: var(--color-elevated-tertiary-background-light-high-contrast);
+
+        /* Subtle Color Definitions */
+        --color-brand-subtle: var(--color-brand-subtle-light-high-contrast);
+        --color-brand-subtle-hover: var(--color-brand-subtle-hover-light-high-contrast);
+        --color-brand-subtle-active: var(--color-brand-subtle-active-light-high-contrast);
+        --color-brand-subtle-static: var(--color-brand-subtle-light-high-contrast);
+        --color-positive-subtle: var(--color-positive-subtle-light-high-contrast);
+        --color-positive-subtle-hover: var(--color-positive-subtle-hover-light-high-contrast);
+        --color-positive-subtle-active: var(--color-positive-subtle-active-light-high-contrast);
+        --color-callout-subtle: var(--color-callout-subtle-light-high-contrast);
+        --color-callout-subtle-hover: var(--color-callout-subtle-hover-light-high-contrast);
+        --color-callout-subtle-active: var(--color-callout-subtle-active-light-high-contrast);
+        --color-neutral-subtle: var(--color-neutral-subtle-light-high-contrast);
+        --color-neutral-subtle-hover: var(--color-neutral-subtle-hover-light-high-contrast);
+        --color-neutral-subtle-active: var(--color-neutral-subtle-active-light-high-contrast);
+        --color-warning-subtle: var(--color-warning-subtle-light-high-contrast);
+        --color-warning-subtle-hover: var(--color-warning-subtle-hover-light-high-contrast);
+        --color-warning-subtle-active: var(--color-warning-subtle-active-light-high-contrast);
+        --color-negative-subtle: var(--color-negative-subtle-light-high-contrast);
+        --color-negative-subtle-hover: var(--color-negative-subtle-hover-light-high-contrast);
+        --color-negative-subtle-active: var(--color-negative-subtle-active-light-high-contrast);
+        --color-dull-subtle: var(--color-dull-subtle-light-high-contrast);
+        --color-dull-subtle-hover: var(--color-dull-subtle-hover-light-high-contrast);
+        --color-dull-subtle-active: var(--color-dull-subtle-active-light-high-contrast);
+
+        /* Other Color Definitions */
+        --color-divider: var(--color-divider-light-high-contrast);
+        --color-placeholder: var(--color-placeholder-light-high-contrast);
+    }
+}
+
+/* MARK: - Dark High Contrast Color Definitions */
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    :root {
+        /* Prominent Color Definitions */
+        --color-brand: var(--color-brand-dark-high-contrast);
+        --color-brand-hover: var(--color-brand-hover-dark-high-contrast);
+        --color-brand-active: var(--color-brand-active-dark-high-contrast);
+        --color-brand-outline: var(--color-brand-outline-dark-high-contrast);
+        --color-brand-static: var(--color-brand-dark-high-contrast);
+        --color-positive: var(--color-positive-dark-high-contrast);
+        --color-positive-hover: var(--color-positive-hover-dark-high-contrast);
+        --color-positive-active: var(--color-positive-active-dark-high-contrast);
+        --color-positive-outline: var(--color-positive-outline-dark-high-contrast);
+        --color-callout: var(--color-callout-dark-high-contrast);
+        --color-callout-hover: var(--color-callout-hover-dark-high-contrast);
+        --color-callout-active: var(--color-callout-active-dark-high-contrast);
+        --color-callout-outline: var(--color-callout-outline-dark-high-contrast);
+        --color-neutral: var(--color-neutral-dark-high-contrast);
+        --color-neutral-hover: var(--color-neutral-hover-dark-high-contrast);
+        --color-neutral-active: var(--color-neutral-active-dark-high-contrast);
+        --color-neutral-outline: var(--color-neutral-outline-dark-high-contrast);
+        --color-warning: var(--color-warning-dark-high-contrast);
+        --color-warning-hover: var(--color-warning-hover-dark-high-contrast);
+        --color-warning-active: var(--color-warning-active-dark-high-contrast);
+        --color-warning-outline: var(--color-warning-outline-dark-high-contrast);
+        --color-negative: var(--color-negative-dark-high-contrast);
+        --color-negative-hover: var(--color-negative-hover-dark-high-contrast);
+        --color-negative-active: var(--color-negative-active-dark-high-contrast);
+        --color-negative-outline: var(--color-negative-outline-dark-high-contrast);
+        --color-dull: var(--color-dull-dark-high-contrast);
+        --color-dull-hover: var(--color-dull-hover-dark-high-contrast);
+        --color-dull-active: var(--color-dull-active-dark-high-contrast);
+        --color-dull-outline: var(--color-dull-outline-dark-high-contrast);
+
+        /* Text Color Definitions */
+        --color-primary-text: var(--color-primary-text-dark-high-contrast);
+        --color-secondary-text: var(--color-secondary-text-dark-high-contrast);
+        --color-inverse-text: var(--color-primary-text-light-high-contrast);
+        --color-link: var(--color-link-dark-high-contrast);
+        --color-link-hover: var(--color-link-hover-dark-high-contrast);
+        --color-link-active: var(--color-link-active-dark-high-contrast);
+        --color-link-visited: var(--color-link-visited-dark-high-contrast);
+
+        /* Background Color Definitions */
+        --color-primary-background: var(--color-primary-background-dark-high-contrast);
+        --color-secondary-background: var(--color-secondary-background-dark-high-contrast);
+        --color-tertiary-background: var(--color-tertiary-background-dark-high-contrast);
+
+        --color-field-background: var(--color-primary-background-dark-high-contrast);
+
+        --color-elevated-primary-background: var(--color-elevated-primary-background-dark-high-contrast);
+        --color-elevated-secondary-background: var(--color-elevated-secondary-background-dark-high-contrast);
+        --color-elevated-tertiary-background: var(--color-elevated-tertiary-background-dark-high-contrast);
+
+        /* Subtle Color Definitions */
+        --color-brand-subtle: var(--color-brand-subtle-dark-high-contrast);
+        --color-brand-subtle-hover: var(--color-brand-subtle-hover-dark-high-contrast);
+        --color-brand-subtle-active: var(--color-brand-subtle-active-dark-high-contrast);
+        --color-brand-subtle-static: var(--color-brand-subtle-dark-high-contrast);
+        --color-positive-subtle: var(--color-positive-subtle-dark-high-contrast);
+        --color-positive-subtle-hover: var(--color-positive-subtle-hover-dark-high-contrast);
+        --color-positive-subtle-active: var(--color-positive-subtle-active-dark-high-contrast);
+        --color-callout-subtle: var(--color-callout-subtle-dark-high-contrast);
+        --color-callout-subtle-hover: var(--color-callout-subtle-hover-dark-high-contrast);
+        --color-callout-subtle-active: var(--color-callout-subtle-active-dark-high-contrast);
+        --color-neutral-subtle: var(--color-neutral-subtle-dark-high-contrast);
+        --color-neutral-subtle-hover: var(--color-neutral-subtle-hover-dark-high-contrast);
+        --color-neutral-subtle-active: var(--color-neutral-subtle-active-dark-high-contrast);
+        --color-warning-subtle: var(--color-warning-subtle-dark-high-contrast);
+        --color-warning-subtle-hover: var(--color-warning-subtle-hover-dark-high-contrast);
+        --color-warning-subtle-active: var(--color-warning-subtle-active-dark-high-contrast);
+        --color-negative-subtle: var(--color-negative-subtle-dark-high-contrast);
+        --color-negative-subtle-hover: var(--color-negative-subtle-hover-dark-high-contrast);
+        --color-negative-subtle-active: var(--color-negative-subtle-active-dark-high-contrast);
+        --color-dull-subtle: var(--color-dull-subtle-dark-high-contrast);
+        --color-dull-subtle-hover: var(--color-dull-subtle-hover-dark-high-contrast);
+        --color-dull-subtle-active: var(--color-dull-subtle-active-dark-high-contrast);
+
+        /* Other Color Definitions */
+        --color-divider: var(--color-divider-dark-high-contrast);
+        --color-placeholder: var(--color-placeholder-dark-high-contrast);
+    }
+}
