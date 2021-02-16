@@ -21,7 +21,7 @@ export default {
             sourcemap: true,
         },
     ],
-    external: ['react'],
+    external: ['react', 'react-dom'],
     plugins: [
         peerDepsExternal(),
         postcss({
@@ -36,7 +36,7 @@ export default {
             clean: true,
         }),
         commonjs({
-            include: ['node_modules/**'],
+            exclude: ['node_modules/**'],
         }),
         terser(),
     ],

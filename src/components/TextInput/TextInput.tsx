@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { Connotation } from '../../theme/Connotation';
 
 export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -13,9 +13,9 @@ export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputEleme
     /**
      * Additional content of the text field.
      */
-    children: {
-        leadingIcon?: ReactNode;
-        trailingIcon?: ReactNode;
+    children?: {
+        leftContent?: ReactNode;
+        rightContent?: ReactNode;
     };
 }
 
@@ -32,8 +32,42 @@ const connotationClasses: { [K in Connotation]: string } = {
     none: 'focus:ring-dull',
 };
 
-const TextInput: React.FC<TextInputProps> = ({ className, connotation = 'neutral', type = 'text', ...otherProps }) => {
-    return <input type={type} className={[standardClasses, connotationClasses[connotation], className ?? ''].join(' ')} {...otherProps} />;
+const TextInput: React.FC<TextInputProps> = ({ className, connotation = 'neutral', type = 'text', children, ...otherProps }) => {
+    // MARK: - Properties
+
+    const leftRef = useRef<HTMLDivElement>(null);
+    const rightRef = useRef<HTMLDivElement>(null);
+
+    const [paddingLeft, setPaddingLeft] = useState<number | undefined>(undefined);
+    const [paddingRight, setPaddingRight] = useState<number | undefined>(undefined);
+
+    useEffect(() => {
+        setPaddingLeft(leftRef.current ? leftRef.current.clientWidth + 4 : undefined);
+        setPaddingRight(rightRef.current ? rightRef.current.clientWidth + 4 : undefined);
+    }, [children?.leftContent, children?.rightContent]);
+
+    // MARK: - DOM
+
+    return (
+        <div className="relative">
+            {children?.leftContent ? (
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" ref={leftRef}>
+                    {children.leftContent}
+                </div>
+            ) : null}
+            <input
+                type={type}
+                className={[standardClasses, connotationClasses[connotation], className ?? ''].join(' ')}
+                style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
+                {...otherProps}
+            />
+            {children?.rightContent ? (
+                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" ref={rightRef}>
+                    {children.rightContent}
+                </div>
+            ) : null}
+        </div>
+    );
 };
 
 export default TextInput;
