@@ -1,5 +1,7 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import React, { ReactNode, useEffect, useCallback, useState } from 'react';
 import { Connotation } from '../../theme/Connotation';
+
+console.log('TEST');
 
 export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     /**
@@ -35,16 +37,26 @@ const connotationClasses: { [K in Connotation]: string } = {
 const TextInput: React.FC<TextInputProps> = ({ className, connotation = 'neutral', type = 'text', children, ...otherProps }) => {
     // MARK: - Properties
 
-    const leftRef = useRef<HTMLDivElement>(null);
-    const rightRef = useRef<HTMLDivElement>(null);
+    const leftRef = useCallback(node => {
+        console.log('LEFT');
+        if (node !== null) {
+            setPaddingLeft(node.getBoundingClientRect().width + 4);
+        } else {
+            setPaddingLeft(4);
+        }
+    }, []);
 
-    const [paddingLeft, setPaddingLeft] = useState<number | undefined>(undefined);
-    const [paddingRight, setPaddingRight] = useState<number | undefined>(undefined);
+    const rightRef = useCallback(node => {
+        console.log('RIGHT');
+        if (node !== null) {
+            setPaddingRight(node.getBoundingClientRect().width + 4);
+        } else {
+            setPaddingRight(4);
+        }
+    }, []);
 
-    useEffect(() => {
-        setPaddingLeft(leftRef.current ? leftRef.current.clientWidth + 4 : undefined);
-        setPaddingRight(rightRef.current ? rightRef.current.clientWidth + 4 : undefined);
-    }, [children?.leftContent, children?.rightContent]);
+    const [paddingLeft, setPaddingLeft] = useState<number | undefined>(4);
+    const [paddingRight, setPaddingRight] = useState<number | undefined>(4);
 
     // MARK: - DOM
 
