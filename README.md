@@ -1,15 +1,11 @@
-# React Tailwind Storybook
+# Solar Design System
 
-[![License: MIT](https://img.shields.io/github/license/impulse/react-tailwind-storybook.svg)](https://opensource.org/licenses/MIT)
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/impulse/react-tailwind-storybook.svg">
+[![License: MIT](https://img.shields.io/github/license/SolarDesignSystem/React.svg)](https://opensource.org/licenses/MIT)
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/SolarDesignSystem/React.svg">
 
 ## About
 
-Starter project for creating a React + TailwindCSS component library with Storybook.
-
-## Available Scripts
-
-Detailed docs following. For now look in `package.json`.
+The variant of the Solar Design System for React projects.
 
 ## Contributing
 
