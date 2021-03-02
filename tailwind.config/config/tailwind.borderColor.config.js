@@ -1,5 +1,6 @@
 module.exports = {
-    default: 'var(--color-divider)',
+    DEFAULT: 'var(--color-divider)',
+    divider: 'var(--color-divider)',
 
     brand: 'var(--color-brand)',
     positive: 'var(--color-positive)',
