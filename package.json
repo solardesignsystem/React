@@ -5,8 +5,8 @@
     "license": "MIT",
     "types": "build/esm/index.d.ts",
     "main": "build/esm/index.js",
-    "module": "build/index.es.js",
-    "typings": "build/index.d.ts",
+    "module": "build/esm/index.es.js",
+    "typings": "build/esm/index.d.ts",
     "files": [
         "build"
     ],
