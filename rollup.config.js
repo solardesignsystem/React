@@ -63,36 +63,10 @@ export default [
     {
         onwarn: discardWarning,
         input: 'src/index.ts',
-        output: {
-            esModule: false,
-            file: pkg.unpkg,
-            name: 'solardesignsystem',
-            globals: {
-                'react': 'React',
-                'react-dom': 'ReactDOM',
-            },
-            output: [{ dir: 'build/umd', format: 'umd', exports: 'named' }],
-        },
-        plugins: [...commonPlugins(), env === 'production' && terser()],
-    },
-    {
-        onwarn: discardWarning,
-        input: 'src/index.ts',
         output: [
             {
-                dir: 'build/esm',
+                dir: 'build',
                 format: 'esm',
-                sourcemap: true,
-                name: 'solardesignsystem',
-                globals: {
-                    'react': 'React',
-                    'react-dom': 'ReactDOM',
-                },
-            },
-            {
-                dir: 'build/cjs',
-                format: 'cjs',
-                exports: 'named',
                 sourcemap: true,
                 name: 'solardesignsystem',
                 globals: {

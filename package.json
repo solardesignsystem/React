@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "author": "Marxon13 (Brandon McQuilkin)",
     "license": "MIT",
-    "types": "build/esm/index.d.ts",
-    "main": "build/esm/index.js",
-    "module": "build/esm/index.es.js",
-    "typings": "build/esm/index.d.ts",
+    "types": "build/index.d.ts",
+    "main": "build/index.js",
+    "module": "build/index.es.js",
+    "typings": "build/index.d.ts",
     "files": [
         "build"
     ],
