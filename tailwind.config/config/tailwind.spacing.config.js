@@ -20,6 +20,7 @@ module.exports = {
     16: 'calc(16.0 * var(--length-base))',
     18: 'calc(18.0 * var(--length-base))',
     20: 'calc(20.0 * var(--length-base))',
+    22: 'calc(22.0 * var(--length-base))',
     24: 'calc(24.0 * var(--length-base))',
     28: 'calc(28.0 * var(--length-base))',
     30: 'calc(30.0 * var(--length-base))',
