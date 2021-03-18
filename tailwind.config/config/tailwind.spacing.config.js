@@ -31,4 +31,8 @@ module.exports = {
     48: 'calc(48.0 * var(--length-base))',
     56: 'calc(56.0 * var(--length-base))',
     64: 'calc(64.0 * var(--length-base))',
+    72: 'calc(72.0 * var(--length-base))',
+    80: 'calc(80.0 * var(--length-base))',
+    88: 'calc(88.0 * var(--length-base))',
+    96: 'calc(96.0 * var(--length-base))',
 };
