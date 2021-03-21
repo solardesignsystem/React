@@ -18,14 +18,7 @@ export interface MessageProps extends React.HTMLAttributes<HTMLDivElement> {
      * The prominence of the message.
      */
     prominence?: Prominence;
-
-    /**
-     * The contents of the message.
-     */
-    children?: string;
 }
-
-const standardclassNamees = '';
 
 const connotationClassNames: { [K in Connotation]: string } = {
     brand: 'bg-brand',
