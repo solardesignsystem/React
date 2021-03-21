@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import ExclamationCirle from '../../icons/ExclamationCircle';
 import TextInput, { TextInputProps } from '../TextInput/TextInput';
 
@@ -21,47 +21,49 @@ export interface FormTextInputProps extends TextInputProps {
     required?: boolean;
 }
 
-const FormTextInput: React.FC<FormTextInputProps> = ({ id, title, description, errorDescription, required, connotation = 'neutral', children, ...otherProps }) => {
-    if (description) {
-        otherProps['aria-describedby'] = `${id}-description`;
-    }
-    if (errorDescription) {
-        otherProps['aria-describedby'] = `${id}-errorDescription`;
-        otherProps['aria-invalid'] = true;
-    }
+const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>(
+    ({ id, title, description, errorDescription, required, connotation = 'neutral', children, ...otherProps }, ref) => {
+        if (description) {
+            otherProps['aria-describedby'] = `${id}-description`;
+        }
+        if (errorDescription) {
+            otherProps['aria-describedby'] = `${id}-errorDescription`;
+            otherProps['aria-invalid'] = true;
+        }
 
-    return (
-        <div>
-            <div className="flex justify-between items-baseline">
-                <label htmlFor={id} className="block text-headline font-medium text-primary">
-                    {title}
-                </label>
-                {required !== undefined ? (
-                    <span className="text-caption text-secondary" id={`id-${required ? 'required' : 'optional'}`}>
-                        {required ? 'Required' : 'Optional'}
-                    </span>
+        return (
+            <div>
+                <div className="flex justify-between items-baseline">
+                    <label htmlFor={id} className="block text-headline font-medium text-primary">
+                        {title}
+                    </label>
+                    {required !== undefined ? (
+                        <span className="text-caption text-secondary" id={`id-${required ? 'required' : 'optional'}`}>
+                            {required ? 'Required' : 'Optional'}
+                        </span>
+                    ) : null}
+                </div>
+                <div className="mt-2">
+                    <TextInput ref={ref} id={id} connotation={errorDescription ? 'negative' : connotation} required={required} {...otherProps}>
+                        {{
+                            leftContent: children?.leftContent,
+                            rightContent: errorDescription ? <ExclamationCirle className="h-5 w-5 text-negative"></ExclamationCirle> : children?.rightContent,
+                        }}
+                    </TextInput>
+                </div>
+                {description ? (
+                    <p className="mt-2 text-footnote text-secondary" id={`${id}-description`}>
+                        {description}
+                    </p>
+                ) : null}
+                {errorDescription ? (
+                    <p className="mt-2 text-footnote text-negative" id={`${id}-errorDescription`}>
+                        {errorDescription}
+                    </p>
                 ) : null}
             </div>
-            <div className="mt-2">
-                <TextInput id={id} connotation={errorDescription ? 'negative' : connotation} required={required} {...otherProps}>
-                    {{
-                        leftContent: children?.leftContent,
-                        rightContent: errorDescription ? <ExclamationCirle className="h-5 w-5 text-negative"></ExclamationCirle> : children?.rightContent,
-                    }}
-                </TextInput>
-            </div>
-            {description ? (
-                <p className="mt-2 text-footnote text-secondary" id={`${id}-description`}>
-                    {description}
-                </p>
-            ) : null}
-            {errorDescription ? (
-                <p className="mt-2 text-footnote text-negative" id={`${id}-errorDescription`}>
-                    {errorDescription}
-                </p>
-            ) : null}
-        </div>
-    );
-};
+        );
+    },
+);
 
 export default FormTextInput;

@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useCallback, useState } from 'react';
+import React, { ReactNode, useCallback, useState, forwardRef } from 'react';
 import { Connotation } from '../../theme/Connotation';
 
 export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -32,7 +32,7 @@ const connotationClasses: { [K in Connotation]: string } = {
     none: 'focus:ring-dull',
 };
 
-const TextInput: React.FC<TextInputProps> = ({ className, connotation = 'neutral', type = 'text', children, ...otherProps }) => {
+const TextInput = forwardRef<HTMLInputElement, TextInputProps>(({ className, connotation = 'neutral', type = 'text', children, ...otherProps }, ref) => {
     // MARK: - Properties
 
     const leftRef = useCallback(node => {
@@ -64,6 +64,7 @@ const TextInput: React.FC<TextInputProps> = ({ className, connotation = 'neutral
                 </div>
             ) : null}
             <input
+                ref={ref}
                 type={type}
                 className={[standardClasses, connotationClasses[connotation], className ?? ''].join(' ')}
                 style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
@@ -76,6 +77,6 @@ const TextInput: React.FC<TextInputProps> = ({ className, connotation = 'neutral
             ) : null}
         </div>
     );
-};
+});
 
 export default TextInput;
