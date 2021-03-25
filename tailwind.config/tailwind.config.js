@@ -21,6 +21,7 @@ const ringWidth = require('./config/tailwind.ringWidth.config');
 const ringOffsetWidth = require('./config/tailwind.ringOffsetWidth.config');
 const screens = require('./config/tailwind.screens.config');
 const spacing = require('./config/tailwind.spacing.config');
+const strokeWidth = require('./config/tailwind.strokeWidth.config');
 const translate = require('./config/tailwind.translate.config');
 
 const fontFamily = require('./config/tailwind.fontFamily.config');
@@ -75,6 +76,7 @@ module.exports = {
         ringWidth,
         screens,
         spacing,
+        strokeWidth,
         translate,
 
         fontFamily,
