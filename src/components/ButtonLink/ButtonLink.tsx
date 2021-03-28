@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Connotation } from '../../theme/Connotation';
 import { Prominence } from '../../theme/Prominence';
 
@@ -23,7 +23,7 @@ export interface ButtonLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorEl
     /**
      * The contents of the button.
      */
-    children?: string;
+    children?: ReactNode;
 }
 
 const standardClasses =
