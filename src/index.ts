@@ -6,3 +6,6 @@ export { default as Checkbox } from './components/Checkbox/Checkbox';
 export { default as FormTextInput } from './components/FormTextInput/FormTextInput';
 export { default as Message } from './components/Message/Message';
 export { default as TextInput } from './components/TextInput/TextInput';
+
+export type { Connotation } from './theme/Connotation';
+export type { Prominence } from './theme/Prominence';
