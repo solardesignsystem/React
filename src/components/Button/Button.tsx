@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Connotation } from '../../theme/Connotation';
 import { Prominence } from '../../theme/Prominence';
 
@@ -23,7 +23,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     /**
      * The contents of the button.
      */
-    children?: string;
+    children?: ReactNode;
 }
 
 const standardClasses =

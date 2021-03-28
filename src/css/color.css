@@ -226,11 +226,13 @@
 
     --color-positive-subtle-hover-light: hsla(135, 59%, 54%, 0.14);
     --color-positive-subtle-hover-dark: hsla(135, 64%, 55%, 0.14);
-    --color-positive-subtle-hover-light-high-contrast: hsla(135,
-            59%,
-            39%,
-            0.14);
+    --color-positive-subtle-hover-light-high-contrast: hsla(135, 59%, 39%, 0.14);
     --color-positive-subtle-hover-dark-high-contrast: hsla(135, 70%, 57%, 0.14);
+
+    --color-positive-subtle-active-light: hsla(135, 59%, 44%, 0.14);
+    --color-positive-subtle-active-dark: hsla(135, 64%, 45%, 0.14);
+    --color-positive-subtle-active-light-high-contrast: hsla(135, 59%, 29%, 0.14);
+    --color-positive-subtle-active-dark-high-contrast: hsla(135, 70%, 47%, 0.14);
 
     /* Callout */
     --color-callout-subtle-light: hsla(276, 61%, 59%, 0.18);
