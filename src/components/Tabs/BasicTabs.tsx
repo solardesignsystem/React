@@ -44,6 +44,7 @@ const BasicTabs: React.FC<BasicTabsProps> = ({ children, titles, initialTabIndex
                             return (
                                 <Tab>
                                     <button
+                                        type="button"
                                         className={`${index === 0 ? 'rounded-l-3' : ''} ${
                                             index === titles.length - 1 ? 'rounded-r-3' : ''
                                         } group relative min-w-0 flex-1 overflow-hidden ${
