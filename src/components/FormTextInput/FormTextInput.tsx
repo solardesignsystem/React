@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import ExclamationCirle from '../../icons/ExclamationCircle';
 import TextInput, { TextInputProps } from '../TextInput/TextInput';
+import { ExclamationCircleIcon } from '@heroicons/react/solid';
 
 export interface FormTextInputProps extends TextInputProps {
     /**
@@ -47,7 +47,7 @@ const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>(
                     <TextInput ref={ref} id={id} connotation={errorDescription ? 'negative' : connotation} required={required} {...otherProps}>
                         {{
                             leftContent: children?.leftContent,
-                            rightContent: errorDescription ? <ExclamationCirle className="h-5 w-5 text-negative"></ExclamationCirle> : children?.rightContent,
+                            rightContent: errorDescription ? <ExclamationCircleIcon className="h-5 w-5 text-negative"></ExclamationCircleIcon> : children?.rightContent,
                         }}
                     </TextInput>
                 </div>

@@ -1,6 +1,6 @@
 {
     "name": "@solardesignsystem/react",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "author": "Marxon13 (Brandon McQuilkin)",
     "license": "MIT",
     "types": "build/index.d.ts",
@@ -69,5 +69,9 @@
     "peerDependencies": {
         "react": ">=17.0",
         "react-dom": ">=17.0"
+    },
+    "dependencies": {
+        "@headlessui/react": "^0.3.1",
+        "@heroicons/react": "^1.0.0"
     }
 }
