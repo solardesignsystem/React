@@ -2,6 +2,9 @@ import React, { ReactNode } from 'react';
 import { Connotation } from '../../theme/Connotation';
 import { Prominence } from '../../theme/Prominence';
 
+/**
+ * The standard sizes of buttons.
+ */
 export type ButtonSize = 'table' | 'form' | 'hero';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -73,6 +76,9 @@ const connotationClasses: { [K in Connotation]: { [L in Prominence]: string } } 
     },
 };
 
+/**
+ * A basic button that performs an action on click / tap.
+ */
 const Button: React.FC<ButtonProps> = ({ children, className, size = 'form', connotation = 'neutral', prominence = 'default', ...otherProps }) => {
     return (
         <button className={[standardClasses, sizeClasses[size], connotationClasses[connotation][prominence], className].join(' ')} {...otherProps}>

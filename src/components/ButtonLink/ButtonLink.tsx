@@ -2,6 +2,9 @@ import React, { ReactNode } from 'react';
 import { Connotation } from '../../theme/Connotation';
 import { Prominence } from '../../theme/Prominence';
 
+/**
+ * The standard sizes of button links.
+ */
 export type ButtonLinkSize = 'table' | 'form' | 'hero';
 
 export interface ButtonLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -73,6 +76,9 @@ const connotationClasses: { [K in Connotation]: { [L in Prominence]: string } } 
     },
 };
 
+/**
+ * A link that looks like a button.
+ */
 const ButtonLink: React.FC<ButtonLinkProps> = ({ children, className, size = 'form', connotation = 'neutral', prominence = 'default', ...otherProps }) => {
     return (
         <a className={[standardClasses, sizeClasses[size], connotationClasses[connotation][prominence], className].join(' ')} {...otherProps}>
