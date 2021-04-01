@@ -1,6 +1,6 @@
 {
     "name": "@solardesignsystem/react",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "author": "Marxon13 (Brandon McQuilkin)",
     "license": "MIT",
     "types": "build/index.d.ts",
