@@ -20,7 +20,7 @@ export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputEleme
 }
 
 const standardClasses =
-    'shadow-sm block w-full sm:text-body border-divider focus:border-divider rounded-2 bg-secondary text-primary transition duration-150 ease-in-out focus:outline-none focus:ring focus:ring-offset focus:ring-offset-primary disabled:opacity-50';
+    'shadow-sm block w-full sm:text-body border-divider focus:border-divider rounded-2 bg-field text-primary transition duration-150 ease-in-out focus:outline-none focus:ring focus:ring-offset focus:ring-offset-primary disabled:opacity-50';
 
 const connotationClasses: { [K in Connotation]: string } = {
     brand: 'focus:ring-brand',

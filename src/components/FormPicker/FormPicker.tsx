@@ -67,8 +67,8 @@ const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, req
                         </div>
                     </Listbox.Label>
                     <div className="relative mt-2">
-                        <span className="inline-block w-full rounded-2 shadow-default border-divider focus:border-divider">
-                            <Listbox.Button className="cursor-default relative w-full rounded-2 border-divider focus:border-divider bg-secondary pl-3 pr-10 py-2 text-left focus:outline-none focus:ring focus:ring-neutral focus:ring-offset focus:ring-offset-primary disabled:opacity-50 transition ease-in-out duration-150 text-body">
+                        <span className="inline-block w-full rounded-2">
+                            <Listbox.Button className="cursor-default relative w-full rounded-2 border-hairline border-divider focus:border-divider bg-field pl-3 pr-10 py-2 text-left focus:outline-none focus:ring focus:ring-neutral focus:ring-offset focus:ring-offset-primary disabled:opacity-50 transition ease-in-out duration-150 text-body">
                                 <span className="block truncate text-primary">{selectedTitle()}</span>
                                 {errorDescription ? (
                                     <span className="absolute inset-y-0 right-0 pr-8 flex items-center pointer-events-none">
@@ -86,7 +86,7 @@ const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, req
                             leave="transition ease-in duration-100"
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
-                            className="absolute mt-1 w-full rounded-2 bg-secondary shadow-container"
+                            className="absolute mt-1 w-full rounded-2 elevated bg-primary shadow-container"
                         >
                             <Listbox.Options static className="max-h-60 rounded-2 py-1 text-body leading-6 shadow-xs overflow-auto focus:outline-none sm:text-sm sm:leading-5">
                                 {options.map(option => (

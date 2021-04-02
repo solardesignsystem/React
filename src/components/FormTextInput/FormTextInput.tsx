@@ -22,7 +22,7 @@ export interface FormTextInputProps extends TextInputProps {
 }
 
 const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>(
-    ({ id, title, description, errorDescription, required, connotation = 'neutral', children, ...otherProps }, ref) => {
+    ({ id, title, description, errorDescription, required, connotation = 'neutral', children, className, ...otherProps }, ref) => {
         if (description) {
             otherProps['aria-describedby'] = `${id}-description`;
         }
@@ -32,7 +32,7 @@ const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>(
         }
 
         return (
-            <div>
+            <div className={className}>
                 <div className="flex justify-between items-baseline">
                     <label htmlFor={id} className="block text-headline font-medium text-primary">
                         {title}

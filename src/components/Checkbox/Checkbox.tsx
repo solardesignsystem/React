@@ -30,7 +30,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ id, className, title, connotation =
                 name="remember_me"
                 type="checkbox"
                 className={[
-                    'h-6 w-6 shadow-sm transition duration-150 ease-in-out focus:ring-neutral border-separator rounded-1 focus:outline-none focus:ring focus:ring-offset focus:ring-offset-primary disabled:opacity-50',
+                    'h-6 w-6 shadow-sm transition duration-150 ease-in-out bg-field rounded-1 border-hairline border-divider focus:ring-neutral focus:border-divider focus:outline-none focus:ring focus:ring-offset focus:ring-offset-primary disabled:opacity-50',
                     connotationClasses[connotation],
                 ].join(' ')}
                 {...otherProps}
