@@ -86,11 +86,15 @@ const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, req
                             leave="transition ease-in duration-100"
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
-                            className="absolute mt-1 w-full rounded-2 elevated bg-primary shadow-container"
+                            className="absolute mt-1 w-full rounded-2 elevated bg-primary shadow-container z-50 overflow-scroll max-h-48"
                         >
-                            <Listbox.Options static className="max-h-60 rounded-2 py-1 text-body leading-6 shadow-xs overflow-auto focus:outline-none sm:text-sm sm:leading-5">
+                            <Listbox.Options static className="max-h-60 rounded-2 py-1 text-body leading-6 shadow-container overflow-auto focus:outline-none sm:leading-5">
                                 {options.map(option => (
-                                    <Listbox.Option key={option.value} value={option.value}>
+                                    <Listbox.Option
+                                        key={option.value}
+                                        value={option.value}
+                                        className="focus:outline-none focus:ring focus:ring-neutral focus:ring-offset focus:ring-offset-primary disabled:opacity-50 transition ease-in-out duration-150"
+                                    >
                                         {({ selected, active }) => (
                                             <div className={`${active ? 'text-inverse bg-prominent-neutral' : 'text-primary'} cursor-default select-none relative py-2 pl-8 pr-4`}>
                                                 <span className={`${selected ? 'font-semibold' : 'font-normal'} block truncate`}>{option.title}</span>
