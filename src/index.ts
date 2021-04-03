@@ -10,6 +10,15 @@ export { default as Message } from './components/Message/Message';
 export { Tabs, TabPane } from './components/Tabs/Tabs';
 export { default as TextInput } from './components/TextInput/TextInput';
 
+export type { BasicTabsProps } from './components/Tabs/BasicTabs';
+export type { ButtonProps } from './components/Button/Button';
+export type { ButtonLinkProps } from './components/ButtonLink/ButtonLink';
+export type { CheckboxProps } from './components/Checkbox/Checkbox';
+export type { FormPickerProps } from './components/FormPicker/FormPicker';
+export type { FormTextInputProps } from './components/FormTextInput/FormTextInput';
+export type { MessageProps } from './components/Message/Message';
+export type { TextInputProps } from './components/TextInput/TextInput';
+
 export type { Connotation } from './theme/Connotation';
 export type { Prominence } from './theme/Prominence';
 
