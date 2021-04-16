@@ -20,6 +20,10 @@ export interface FormPickerProps {
      * Whether or not the field is required.
      */
     required?: boolean;
+    /**
+     * The classes to apply to the picker.
+     */
+    className?: string;
 }
 
 type FormPickerType<TType> = React.FC<
