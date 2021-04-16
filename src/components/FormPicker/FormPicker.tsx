@@ -57,7 +57,7 @@ const FormPicker: FormPickerType<string> = ({ options, title, required, value, o
     };
 
     return (
-        <Listbox value={value} onChange={onChange} {...otherProps}>
+        <Listbox as="div" value={value} onChange={onChange} {...otherProps}>
             {({ open }) => (
                 <>
                     <Listbox.Label>
