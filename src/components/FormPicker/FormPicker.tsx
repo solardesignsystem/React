@@ -3,7 +3,7 @@ import React from 'react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/outline';
 import { ExclamationCircleIcon } from '@heroicons/react/solid';
 
-export interface FormPickerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface FormPickerProps {
     /**
      * The title of the picker.
      */
@@ -43,7 +43,7 @@ type FormPickerType<TType> = React.FC<
 /**
  * A basic button that performs an action on click / tap.
  */
-const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, required, value, onChange, description, errorDescription, ...otherProps }) => {
+const FormPicker: FormPickerType<string> = ({ options, title, required, value, onChange, description, errorDescription, ...otherProps }) => {
     const selectedTitle = () => {
         const matches = options.filter(option => option.value === value);
         if (matches.length > 0) {
@@ -53,7 +53,7 @@ const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, req
     };
 
     return (
-        <Listbox as="div" value={value} onChange={onChange} {...otherProps}>
+        <Listbox value={value} onChange={onChange} {...otherProps}>
             {({ open }) => (
                 <>
                     <Listbox.Label>
@@ -96,10 +96,10 @@ const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, req
                                         className="focus:outline-none focus:ring focus:ring-neutral focus:ring-offset focus:ring-offset-primary disabled:opacity-50 transition ease-in-out duration-150"
                                     >
                                         {({ selected, active }) => (
-                                            <div className={`${active ? 'text-inverse bg-prominent-neutral' : 'text-primary'} cursor-default select-none relative py-2 pl-8 pr-4`}>
+                                            <div className={`${active ? 'bg-neutral' : ''} text-primary cursor-default select-none relative py-2 pl-8 pr-4`}>
                                                 <span className={`${selected ? 'font-semibold' : 'font-normal'} block truncate`}>{option.title}</span>
                                                 {selected && (
-                                                    <span className={`${active ? 'text-inverse' : 'text-neutral'} absolute inset-y-0 left-0 flex items-center pl-1.5`}>
+                                                    <span className={`absolute inset-y-0 left-0 flex items-center pl-1.5`}>
                                                         <CheckIcon className="h-5 w-5"></CheckIcon>
                                                     </span>
                                                 )}
@@ -111,12 +111,12 @@ const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, req
                         </Transition>
                     </div>
                     {description ? (
-                        <p className="mt-2 text-footnote text-secondary" id={`${id}-description`}>
+                        <p className="mt-2 text-footnote text-secondary" id={`description`}>
                             {description}
                         </p>
                     ) : null}
                     {errorDescription ? (
-                        <p className="mt-2 text-footnote text-negative" id={`${id}-errorDescription`}>
+                        <p className="mt-2 text-footnote text-negative" id={`errorDescription`}>
                             {errorDescription}
                         </p>
                     ) : null}
