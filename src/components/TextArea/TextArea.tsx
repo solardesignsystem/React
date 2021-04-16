@@ -1,15 +1,11 @@
 import React, { ReactNode, useCallback, useState, forwardRef } from 'react';
 import { Connotation } from '../../theme/Connotation';
 
-export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
     /**
      * The connotation of the text input.
      */
     connotation?: Connotation;
-    /**
-     * The type of input.
-     */
-    type: 'text' | 'email' | 'password' | 'search' | 'tel' | 'number' | 'url';
     /**
      * Additional content of the text field.
      */
@@ -20,7 +16,7 @@ export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputEleme
 }
 
 const standardClasses =
-    'shadow-sm block w-full sm:text-body border-divider focus:border-divider rounded-2 py-2 bg-field text-primary transition duration-150 ease-in-out focus:outline-none focus:ring focus:ring-offset focus:ring-offset-primary disabled:opacity-50';
+    'shadow-sm block w-full sm:text-body border-divider focus:border-divider rounded-2 overflow-hidden bg-field text-primary transition duration-150 ease-in-out focus:outline-none focus:ring focus:ring-offset focus:ring-offset-primary disabled:opacity-50';
 
 const connotationClasses: { [K in Connotation]: string } = {
     brand: 'focus:ring-brand',
@@ -32,7 +28,7 @@ const connotationClasses: { [K in Connotation]: string } = {
     none: 'focus:ring-dull',
 };
 
-const TextInput = forwardRef<HTMLInputElement, TextInputProps>(({ className, connotation = 'neutral', type = 'text', children, ...otherProps }, ref) => {
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(({ className, connotation = 'neutral', children, ...otherProps }, ref) => {
     // MARK: - Properties
 
     const leftRef = useCallback(node => {
@@ -63,9 +59,8 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(({ className, con
                     {children.leftContent}
                 </div>
             ) : null}
-            <input
+            <textarea
                 ref={ref}
-                type={type}
                 className={[standardClasses, connotationClasses[connotation], className ?? ''].join(' ')}
                 style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
                 {...otherProps}
@@ -79,4 +74,4 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(({ className, con
     );
 });
 
-export default TextInput;
+export default TextArea;

@@ -6,7 +6,11 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => {
-    return <div className="p-2">{children}</div>;
+    return (
+        <div id="modal-root" className="p-2">
+            {children}
+        </div>
+    );
 };
 
 export default Layout;

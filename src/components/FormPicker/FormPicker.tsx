@@ -86,7 +86,7 @@ const FormPicker: FormPickerType<string> = ({ id = 'picker', options, title, req
                             leave="transition ease-in duration-100"
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
-                            className="absolute mt-1 w-full rounded-2 elevated bg-primary shadow-container z-50 overflow-scroll max-h-48"
+                            className="absolute mt-1 w-full rounded-2 elevated bg-primary border-hairline border-divider shadow-container z-50 overflow-scroll max-h-48"
                         >
                             <Listbox.Options static className="max-h-60 rounded-2 py-1 text-body leading-6 shadow-container overflow-auto focus:outline-none sm:leading-5">
                                 {options.map(option => (
